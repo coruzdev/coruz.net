@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #0054ff;
+  --color-darkblue: #0040bf;
+  --color-accent: #ff6b00;
+  --color-lightbg: #f5f6f9;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --font-sans: "Nunito Sans", system-ui, sans-serif;
+  --font-display: "Work Sans", system-ui, sans-serif;
+}
+
+body {
+  @apply bg-lightbg text-black font-sans;
+}
