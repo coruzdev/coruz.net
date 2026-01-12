@@ -1,0 +1,225 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
+
+import logoWhite from "@/assets/images/coruz-logo-white.png";
+---
+
+<header class="dark-section w-full sticky top-0 z-50">
+  <div
+    class="main-container flex justify-between items-center text-sm md:text-base border-b border-light-secondary"
+  >
+    <a
+      class="flex items-center gap-1 py-2 hover:text-light-secondary"
+      href={createContactURL("w")}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Enviar mensaje por WhatsApp al número ${CONTACT_INFO.whatsAppNumber}`}
+    >
+      <Icon name="ic.baseline-whatsapp" />
+      {CONTACT_INFO.whatsAppNumberFormatted}
+    </a>
+    <a
+      class="flex items-center gap-1 py-2 hover:text-light-secondary"
+      href={createContactURL("e-info")}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Enviar correo electrónico a ${CONTACT_INFO.infoEmail}`}
+    >
+      <Icon name="mdi.envelope" />
+      {CONTACT_INFO.infoEmail}
+    </a>
+  </div>
+  <div
+    class="main-container flex justify-between items-center text-base md:text-lg font-medium py-2"
+  >
+    <Image
+      src={logoWhite}
+      format="webp"
+      height={80}
+      width={80}
+      alt="Logo de CORUZ - Diseño y Desarrollo de Páginas Web en México"
+      class="h-16 w-16 md:h-20 md:w-20"
+    />
+    <nav class="hidden lg:block">
+      <ul class="flex gap-10">
+        <li><a class="hover:text-light-secondary" href="/#home">Inicio</a></li>
+        <li>
+          <a class="hover:text-light-secondary" href="/#about-us">Nosotros</a>
+        </li>
+        <li>
+          <a class="hover:text-light-secondary" href="/#services">Servicios</a>
+        </li>
+        <li>
+          <a
+            class="bg-accent hover:bg-accent/90 text-white hover:text-white/90 transition-all duration-300 font-display py-2 px-4 text-center"
+            href={createContactURL(
+              "w",
+              "Buen día, quiero una página web, ¿podrían enviarme información de las páginas web que ofrecen?"
+            )}
+            target="_blank"
+            rel="noopener noreferrer">¡Quiero mi página web!</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <button
+      id="mobile-nav-button"
+      class="lg:hidden cursor-pointer"
+      type="button"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+    >
+      <Icon
+        id="mobile-nav-open"
+        name="material-symbols.menu-rounded"
+        class="w-10 max-md:w-8 h-10 max-md:h-8"
+        aria-hidden="true"
+      />
+      <Icon
+        id="mobile-nav-close"
+        name="material-symbols.close-rounded"
+        class="w-10 max-md:w-8 h-10 max-md:h-8 hidden"
+        aria-hidden="true"
+      />
+    </button>
+  </div>
+  <div
+    id="mobile-nav"
+    class="main-container hidden lg:hidden opacity-0 max-h-0 transition-all duration-300 border-t-2 border-light-secondary text-base md:text-lg font-medium"
+  >
+    <nav id="mobile-nav-content">
+      <ul class="flex flex-col flex-1 justify-center items-center">
+        <li class="w-full text-center">
+          <a
+            class="hover:text-light-secondary block py-4 border-b border-light-secondary"
+            href="/#home">Inicio</a
+          >
+        </li>
+        <li class="w-full text-center">
+          <a
+            class="hover:text-light-secondary block py-4 border-b border-light-secondary"
+            href="/#about-us">Nosotros</a
+          >
+        </li>
+        <li class="w-full text-center">
+          <a
+            class="hover:text-light-secondary block py-4 border-b border-light-secondary"
+            href="/#services">Servicios</a
+          >
+        </li>
+        <li class="w-full text-center p-5">
+          <a
+            class="w-full block bg-accent hover:bg-accent/90 text-white hover:text-white/90 transition-all duration-300 font-display py-2 px-4 text-center"
+            href={createContactURL(
+              "w",
+              "Buen día, quiero una página web, ¿podrían enviarme información de las páginas web que ofrecen?"
+            )}
+            target="_blank"
+            rel="noopener noreferrer">¡Quiero mi página web!</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    // Obtiene los elementos necesarios del DOM
+    const headerElement = document.querySelector("header") as HTMLElement;
+    const mobileNavButton = document.querySelector(
+      "#mobile-nav-button"
+    ) as HTMLButtonElement;
+    const mobileNavOpen = document.querySelector(
+      "#mobile-nav-open"
+    ) as HTMLElement;
+    const mobileNavClose = document.querySelector(
+      "#mobile-nav-close"
+    ) as HTMLElement;
+    const mobileNav = document.querySelector("#mobile-nav") as HTMLDivElement;
+    const mobileNavContent = document.querySelector(
+      "#mobile-nav-content"
+    ) as HTMLElement;
+
+    // Obtiene todos los enlaces de anclaje
+    const anchorLinks = document.querySelectorAll<HTMLAnchorElement>(
+      'a[href^="/#"], a[href^="#"]'
+    );
+
+    // Función para hacer scroll suave a una sección específica y limpiar el hash de la URL sin recargar la página
+    const scrollToSection = (targetId: string) => {
+      const targetElement = document.getElementById(targetId);
+
+      if (!targetElement) return false;
+
+      const targetPosition =
+        targetElement.getBoundingClientRect().top +
+        window.scrollY -
+        headerElement.clientHeight;
+
+      window.scrollTo({ top: Math.max(targetPosition, 0), behavior: "smooth" });
+
+      history.replaceState(
+        {},
+        document.title,
+        `${window.location.pathname}${window.location.search}`
+      );
+      return true;
+    };
+
+    // Añade event listeners a todos los enlaces de anclaje
+    anchorLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const targetId = link.getAttribute("href")?.replace(/^\/?#/, "") ?? "";
+
+        if (!targetId) return;
+
+        if (document.getElementById(targetId)) {
+          event.preventDefault();
+          setTimeout(() => scrollToSection(targetId), 100);
+        }
+      });
+    });
+
+    // Si hay un hash en la URL al cargar, hace scroll a esa sección
+    if (window.location.hash) {
+      setTimeout(() => {
+        scrollToSection(window.location.hash?.replace(/^#/, ""));
+      }, 100);
+    }
+
+    // Función para mostrar u ocultar el menú de navegación móvil con animación
+    const toggleMobileNav = (isOpen: boolean) => {
+      if (isOpen) {
+        mobileNav.classList.remove("hidden");
+        requestAnimationFrame(() => {
+          mobileNav.classList.remove("opacity-0", "max-h-0");
+          mobileNav.classList.add("opacity-100", "max-h-96");
+        });
+        mobileNavButton.setAttribute("aria-label", "Cerrar menú de navegación");
+        mobileNavButton.setAttribute("aria-expanded", "true");
+      } else {
+        mobileNav.classList.remove("opacity-100", "max-h-96");
+        mobileNav.classList.add("opacity-0", "max-h-0");
+        setTimeout(() => {
+          mobileNav.classList.add("hidden");
+        }, 300);
+        mobileNavButton.setAttribute("aria-label", "Abrir menú de navegación");
+        mobileNavButton.setAttribute("aria-expanded", "false");
+      }
+      mobileNavOpen.classList.toggle("hidden", isOpen);
+      mobileNavClose.classList.toggle("hidden", !isOpen);
+    };
+
+    // Event listeners para los botones de apertura y cierre del menú móvil
+    mobileNavOpen.addEventListener("click", () => toggleMobileNav(true));
+    mobileNavClose.addEventListener("click", () => toggleMobileNav(false));
+
+    // Cierra el menú móvil al hacer clic en cualquier enlace dentro de él
+    mobileNavContent.addEventListener("click", () => toggleMobileNav(false));
+  });
+</script>
