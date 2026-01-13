@@ -20,6 +20,7 @@
 
   --font-sans: "Nunito Sans", system-ui, sans-serif;
   --font-display: "Work Sans", system-ui, sans-serif;
+  --font-logo: "Audiowide", system-ui, sans-serif;
 }
 
 :root {
@@ -27,7 +28,7 @@
 }
 
 body {
-  @apply bg-light text-dark-primary font-sans;
+  @apply bg-light text-dark-primary font-sans font-normal;
 }
 
 .dark-section {
