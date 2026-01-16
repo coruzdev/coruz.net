@@ -48,7 +48,8 @@ import logoWhite from "@/assets/images/coruz-logo-white.png";
         <li>
           <a
             class="hover:text-light-secondary focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
-            href="/#home">Inicio</a>
+            href="/#home">Inicio</a
+          >
         </li>
         <li>
           <a
@@ -229,9 +230,23 @@ import logoWhite from "@/assets/images/coruz-logo-white.png";
       mobileNavClose.classList.toggle("hidden", !isOpen);
     };
 
-    // Event listeners para los botones de apertura y cierre del menú móvil
-    mobileNavOpen.addEventListener("click", () => toggleMobileNav(true));
-    mobileNavClose.addEventListener("click", () => toggleMobileNav(false));
+    // Event listener para el botón del menú móvil
+    // Al ser un elemento <button>, soporta automáticamente 'Enter' y 'Espacio'
+    mobileNavButton.addEventListener("click", () => {
+      const isExpanded =
+        mobileNavButton.getAttribute("aria-expanded") === "true";
+      toggleMobileNav(!isExpanded);
+    });
+
+    // Cierra el menú móvil al presionar la tecla 'Escape'
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        mobileNavButton.getAttribute("aria-expanded") === "true"
+      ) {
+        toggleMobileNav(false);
+      }
+    });
 
     // Cierra el menú móvil al hacer clic en cualquier enlace dentro de él
     mobileNavContent.addEventListener("click", () => toggleMobileNav(false));
