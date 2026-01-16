@@ -1,0 +1,39 @@
+---
+import CTA from "@/components/CTA.astro";
+import { Image } from "astro:assets";
+import heroImage from "@/assets/images/hero.jpg";
+---
+
+<section id="home" class="relative py-40 overflow-hidden">
+  <Image
+    src={heroImage}
+    format="webp"
+    alt="Personas trabajando frente a computadoras en una oficina moderna."
+    class="absolute inset-0 w-full h-full object-cover -z-20"
+  />
+  <div class="absolute inset-0 bg-dark-primary/80 bg-blend-overlay -z-10"></div>
+  <div class="main-container text-light-primary">
+    <h1
+      class="sm:mx-10 text-4xl sm:text-5xl lg:text-6xl leading-tight font-black text-center mb-10"
+    >
+      Impulsa tu negocio con una página web completa y accesible
+    </h1>
+    <p
+      class="mx-10 sm:mx-20 text-base sm:text-lg lg:text-xl text-center leading-relaxed mb-10 sm:mb-20"
+    >
+      Diseñamos páginas web modernas, rápidas y seguras para profesionales y
+      negocios en México, listas para impulsar tu presencia digital desde el
+      primer día
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+      <CTA
+        text="Cotiza tu página hoy"
+        message="Buen día, quiero cotizar una página web, ¿me podrían enviar información?"
+      />
+      <a
+        class="border border-light-primary hover:bg-dark-secondary transition-all duration-300 font-medium py-2 px-4 text-base md:text-lg text-center"
+        href="#services">Ver servicios</a
+      >
+    </div>
+  </div>
+</section>
