@@ -31,13 +31,25 @@ import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
         <h5 class="text-base md:text-lg font-bold mb-5">Menú</h5>
         <ul class="text-sm md:text-base">
           <li class="hover:text-light-secondary">
-            <a href="/#home" class="block py-1">Inicio</a>
+            <a
+              href="/#home"
+              class="block py-1 focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
+              >Inicio</a
+            >
           </li>
           <li class="hover:text-light-secondary">
-            <a href="/#about-us" class="block py-1">Nosotros</a>
+            <a
+              href="/#about-us"
+              class="block py-1 focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
+              >Nosotros</a
+            >
           </li>
           <li class="hover:text-light-secondary">
-            <a href="/#services" class="block py-1">Servicios</a>
+            <a
+              href="/#services"
+              class="block py-1 focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
+              >Servicios</a
+            >
           </li>
         </ul>
       </nav>
@@ -47,21 +59,21 @@ import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
     >
       <h5 class="text-base md:text-lg font-bold mb-5">Contáctanos</h5>
       <a
-        class="flex items-center gap-1 py-1 hover:text-light-secondary text-sm md:text-base"
+        class="flex items-center gap-1 py-1 hover:text-light-secondary text-sm md:text-base focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
         href={createContactURL("w")}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Enviar mensaje por WhatsApp al número ${CONTACT_INFO.whatsAppNumber}`}
+        aria-label={`Enviar mensaje por WhatsApp al número ${CONTACT_INFO.whatsAppNumber} (abre WhatsApp en una nueva pestaña)`}
       >
         <Icon name="ic.baseline-whatsapp" />
         {CONTACT_INFO.whatsAppNumberFormatted}
       </a>
       <a
-        class="flex items-center gap-1 py-1 hover:text-light-secondary text-sm md:text-base"
+        class="flex items-center gap-1 py-1 hover:text-light-secondary text-sm md:text-base focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
         href={createContactURL("e-info")}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Enviar correo electrónico a ${CONTACT_INFO.infoEmail}`}
+        aria-label={`Enviar correo electrónico a ${CONTACT_INFO.infoEmail} (abre el cliente de correo)`}
       >
         <Icon name="mdi.envelope" />
         {CONTACT_INFO.infoEmail}
@@ -73,7 +85,7 @@ import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
   >
     <p>
       <a
-        class="underline hover:text-light-secondary"
+        class="underline hover:text-light-secondary focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
         href="/aviso-de-privacidad">Aviso de privacidad</a
       >
     </p>

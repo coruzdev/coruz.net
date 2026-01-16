@@ -10,8 +10,9 @@ const { text, message } = Astro.props;
 ---
 
 <a
-  class="bg-accent hover:bg-accent/90 text-white hover:text-white/90 transition-all duration-300 font-display font-medium py-2 px-4 text-base md:text-lg text-center"
+  class="bg-accent hover:bg-accent/90 text-white hover:text-white/90 transition-all duration-300 font-display font-medium py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 outline-none"
   href={createContactURL("w", message)}
   target="_blank"
-  rel="noopener noreferrer">{text}</a
+  rel="noopener noreferrer"
+  aria-label={`${text} (abre WhatsApp en una nueva pestaña)`}>{text}</a
 >
