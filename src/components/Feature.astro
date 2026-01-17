@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  imageURL: ImageMetadata;
+  title: string;
+  description: string;
+}
+const { imageURL, title, description } = Astro.props;
+---
+
+<article>
+  <Image
+    src={imageURL}
+    height={80}
+    format="webp"
+    class="h-16 sm:h-20 w-auto mx-auto mb-6 object-contain"
+    alt={`Ícono de ${title.toLowerCase()} de páginas web`}
+    aria-hidden="true"
+  />
+  <h4 class="text-lg sm:text-xl font-bold leading-tight text-center mb-6">
+    {title}
+  </h4>
+  <p class="text-sm sm:text-base leading-relaxed text-center">
+    {description}
+  </p>
+</article>
