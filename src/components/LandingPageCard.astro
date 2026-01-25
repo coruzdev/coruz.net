@@ -1,0 +1,79 @@
+---
+import { createContactURL } from "@/coruz.net.config";
+
+import CTA from "@/components/CTA.astro";
+
+interface Props {
+  badge: string;
+  version: string;
+  description: string;
+  versionFeatures: string;
+  featuresExample: string;
+  ctaText: string;
+  ctaMessage: string;
+  isRecommended: boolean;
+}
+
+const {
+  badge,
+  version,
+  description,
+  versionFeatures,
+  featuresExample,
+  ctaText,
+  ctaMessage,
+  isRecommended,
+} = Astro.props;
+---
+
+<div
+  class:list={[
+    "relative flex flex-col p-8",
+    {
+      "bg-white/5 border border-white/10": !isRecommended,
+      "bg-white/5 border-2 border-accent": isRecommended,
+    },
+  ]}
+>
+  {
+    isRecommended && (
+      <div class="absolute -top-3.5 -right-0.5 bg-accent text-white text-[10px] font-black px-4 py-1.5 uppercase tracking-widest">
+        Recomendado
+      </div>
+    )
+  }
+  <div class="flex flex-col items-center text-center mb-6 grow gap-4">
+    <span
+      class="text-[10px] font-black px-4 py-1.5 uppercase tracking-widest bg-white/5"
+    >
+      {badge}
+    </span>
+    <h5 class="text-3xl font-bold text-light-primary">{version}</h5>
+    <p class="text-base leading-relaxed max-w-11/12">
+      {description}
+    </p>
+  </div>
+  <div class="flex flex-col justify-center mb-8">
+    <div
+      class="bg-white/5 border border-white/10 p-6 flex flex-col items-center text-center gap-3"
+    >
+      <p class="text-sm">
+        <span class="block leading-tight font-bold mb-2">{versionFeatures}</span>
+        <span class="block font-medium">{featuresExample}</span>
+      </p>
+    </div>
+  </div>
+  {isRecommended && <CTA text={ctaText} message={ctaMessage} />}
+  {
+    !isRecommended && (
+      <a
+        class="bg-transparent border border-white/20 text-light-primary hover:bg-white/5 transition-all duration-300 font-medium py-2 px-4 text-base md:text-lg text-center"
+        href={createContactURL("w", ctaMessage)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {ctaText}
+      </a>
+    )
+  }
+</div>

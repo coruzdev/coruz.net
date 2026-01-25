@@ -1,0 +1,138 @@
+---
+import { Icon } from "astro-icon/components";
+
+import LandingPageCard from "@/components/LandingPageCard.astro";
+
+const sharedFeatures = [
+  {
+    text: "Estructura de una sola página dividida en secciones",
+    icon: "streamline.layout-window-2",
+  },
+  {
+    text: "Diseño adaptable y moderno",
+    icon: "streamline-ultimate.responsive-design",
+  },
+  {
+    text: "Botón de contacto directo por WhatsApp",
+    icon: "ic.baseline-whatsapp",
+  },
+  {
+    text: "Enlaces a redes sociales",
+    icon: "tabler.social",
+  },
+  {
+    text: "Integración de Google Maps",
+    icon: "arcticons.maps",
+  },
+  {
+    text: "Optimización de velocidad y rendimiento",
+    icon: "material-symbols.speed-outline",
+  },
+  {
+    text: "Optimización para buscadores y asistentes de IA",
+    icon: "material-symbols.search-rounded",
+  },
+  {
+    text: "Alojamiento de la web",
+    icon: "uil.server",
+  },
+  {
+    text: "Seguridad para ti y tus clientes",
+    icon: "material-symbols.security-rounded",
+  },
+];
+const cardsData = [
+  {
+    badge: "PRESENCIA",
+    version: "Lite",
+    description:
+      "Presencia digital inmediata y accesible. Perfecta para iniciar en línea y recibir contactos sin procesos adicionales.",
+    versionFeatures: "Subdominio gestionado por CORUZ",
+    featuresExample: "(tunegocio.coruz.net)",
+    CTAText: "Solicitar Lite",
+    CTAMessage:
+      "Buen día, quiero cotizar una landing page lite, ¿me podrías enviar información?",
+    isRecommended: false,
+  },
+  {
+    badge: "IDENTIDAD",
+    version: "Standard",
+    description:
+      "Imagen profesional con identidad propia. Ideal para negocios que buscan mayor confianza desde el primer contacto.",
+    versionFeatures: "Dominio .com propio y correo profesional",
+    featuresExample: "(tunegocio.com)",
+    CTAText: "¡Quiero la Standard!",
+    CTAMessage:
+      "Buen día, quiero cotizar una landing page standard, ¿me podrías enviar información?",
+    isRecommended: true,
+  },
+];
+---
+
+<div class="py-32 bg-dark text-light-secondary" aria-labelledby="lp-title">
+  <div class="main-container">
+    <h2
+      class="text-accent text-center text-sm font-black mb-8 tracking-widest uppercase"
+    >
+      Servicios
+    </h2>
+    <h3
+      id="lp-title"
+      class="w-full xl:w-2/3 mx-auto text-center text-3xl sm:text-4xl font-bold text-light-primary leading-tight mb-6"
+    >
+      Landing Page
+    </h3>
+    <p
+      class="text-center text-base sm:text-lg leading-relaxed max-w-5xl mx-auto"
+    >
+      La forma más simple y efectiva de tener presencia online. Un sitio de
+      estructura continua, dividida en secciones estratégicas que guían al
+      visitante hacia una acción concreta, como contactarte o solicitar
+      información.
+    </p>
+    <div
+      class="max-w-5xl mx-auto mt-20 mb-16 bg-white/5 border border-white/10 p-8 md:p-12"
+    >
+      <h4
+        class="text-light-primary text-center text-lg sm:text-xl font-bold leading-tight mb-10"
+      >
+        Lo que incluye tu Landing Page:
+      </h4>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12"
+      >
+        {
+          sharedFeatures.map((feature) => (
+            <div class="flex items-center gap-4">
+              <Icon
+                name={feature.icon}
+                class="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0 transform-[translateZ(0)] backface-hidden will-change-transform"
+                aria-hidden="true"
+              />
+              <p class="text-sm sm:text-base leading-tight">{feature.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-stretch"
+    >
+      {
+        cardsData.map((card) => (
+          <LandingPageCard
+            badge={card.badge}
+            version={card.version}
+            description={card.description}
+            versionFeatures={card.versionFeatures}
+            featuresExample={card.featuresExample}
+            ctaText={card.CTAText}
+            ctaMessage={card.CTAMessage}
+            isRecommended={card.isRecommended}
+          />
+        ))
+      }
+    </div>
+  </div>
+</div>
