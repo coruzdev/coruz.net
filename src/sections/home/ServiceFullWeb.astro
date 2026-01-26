@@ -1,0 +1,151 @@
+---
+import { Icon } from "astro-icon/components";
+import FullWebHighlight from "@/components/FullWebHighlight.astro";
+import { createContactURL } from "@/coruz.net.config";
+
+const features = [
+  {
+    text: "Estructura multi-página",
+    icon: "streamline-ultimate.app-window-multiple",
+  },
+  {
+    text: "Diseño adaptable y moderno",
+    icon: "streamline-ultimate.responsive-design",
+  },
+  {
+    text: "Contacto directo por WhatsApp",
+    icon: "ic.baseline-whatsapp",
+  },
+  {
+    text: "Conexión a redes sociales",
+    icon: "tabler.social",
+  },
+  {
+    text: "Ubicación en Google Maps",
+    icon: "arcticons.maps",
+  },
+  {
+    text: "Carga y velocidad optimizada",
+    icon: "material-symbols.speed-outline",
+  },
+  {
+    text: "Posicionamiento en IA",
+    icon: "hugeicons.ai-search",
+  },
+  {
+    text: "Alojamiento web",
+    icon: "uil.server",
+  },
+  {
+    text: "Dominio .com propio",
+    icon: "stash.domain",
+  },
+  {
+    text: "Correo profesional",
+    icon: "entypo.email",
+  },
+  {
+    text: "Seguridad y certificado SSL",
+    icon: "material-symbols.security-rounded",
+  },
+];
+
+const highlights = [
+  {
+    title: "Desde 4 páginas escenciales",
+    description:
+      "Incluye Inicio, Nosotros, Servicios y Contacto con una navegación intuitiva y profesional.",
+  },
+  {
+    title: "Posicionamiento Avanzado",
+    description:
+      "Optimización profunda orientada a resultados en buscadores y asistentes de IA (LLMs) para dominar tu sector.",
+  },
+  {
+    title: "Diseño de Alto Perfil",
+    description:
+      "Identidad visual robusta y contenido estructurado estratégicamente para comunicar tu propuesta de valor de forma impecable.",
+  },
+  {
+    title: "Escalabilidad Total",
+    description:
+      "Estructura preparada para crecer. Añadimos las secciones o funcionalidades que tu negocio necesite en el futuro.",
+  },
+];
+---
+
+<div class="py-32 bg-light text-dark-secondary" aria-labelledby="fw-title">
+  <div class="main-container">
+    <div
+      class="bg-white border border-light-primary p-12 md:p-20 shadow-2xl shadow-dark/5"
+    >
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 items-start pb-6"
+      >
+        <div>
+          <span
+            class="text-[10px] font-black px-4 py-1.5 uppercase tracking-widest bg-accent/10 text-accent mb-4 inline-block"
+          >
+            AUTORIDAD
+          </span>
+          <h3
+            id="fw-title"
+            class="text-3xl sm:text-4xl font-bold leading-tight mb-6 text-dark-primary"
+          >
+            Full Web
+          </h3>
+          <p class="text-base sm:text-lg leading-relaxed mb-10">
+            Sitio web profesional multi-página con una estructura robusta y
+            escalable. Diseñado para negocios que buscan organizar su catálogo
+            de servicios, proyectar máxima autoridad y centralizar toda su
+            operación digital.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
+            {
+              features.map((feature) => (
+                <div class="flex items-center gap-4">
+                  <Icon
+                    name={feature.icon}
+                    class="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0 transform-[translateZ(0)] backface-hidden will-change-transform"
+                    aria-hidden="true"
+                  />
+                  <p class="text-sm sm:text-base leading-tight">
+                    {feature.text}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          {
+            highlights.map((feature) => (
+              <FullWebHighlight
+                title={feature.title}
+                description={feature.description}
+              />
+            ))
+          }
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-6 pt-6 border-t border-light-primary items-start"
+      >
+        <p class="text-xs sm:text-sm text-muted">
+          ¿Necesitas algo más complejo? Personalizamos cada detalle.
+        </p>
+        <a
+          class="bg-dark hover:bg-dark/90 text-light-primary hover:text-light-primary/90 transition-all duration-300 font-medium py-2 px-4 text-base md:text-lg text-center"
+          href={createContactURL(
+            "w",
+            "Buen día, quiero cotizar una web completa, ¿me podrían enviar información?",
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Cotizar Full Web
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
