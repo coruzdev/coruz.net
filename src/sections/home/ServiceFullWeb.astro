@@ -100,10 +100,13 @@ const highlights = [
             de servicios, proyectar máxima autoridad y centralizar toda su
             operación digital.
           </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12"
+            role="list"
+          >
             {
               features.map((feature) => (
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4" role="listitem">
                   <Icon
                     name={feature.icon}
                     class="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0 transform-[translateZ(0)] backface-hidden will-change-transform"
@@ -117,7 +120,7 @@ const highlights = [
             }
           </div>
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6" role="list">
           {
             highlights.map((feature) => (
               <FullWebHighlight
@@ -135,13 +138,14 @@ const highlights = [
           ¿Necesitas algo más complejo? Personalizamos cada detalle.
         </p>
         <a
-          class="bg-dark hover:bg-dark/90 text-light-primary hover:text-light-primary/90 transition-all duration-300 font-medium py-2 px-4 text-base md:text-lg text-center"
+          class="bg-dark hover:bg-dark/90 text-light-primary hover:text-light-primary/90 transition-all duration-300 font-medium py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 outline-none"
           href={createContactURL(
             "w",
             "Buen día, quiero cotizar una web completa, ¿me podrían enviar información?",
           )}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Cotizar Full Web (abre WhatsApp en una nueva pestaña)"
         >
           Cotizar Full Web
         </a>

@@ -72,6 +72,7 @@ const cardsData = [
 <div class="py-32 bg-dark text-light-secondary" aria-labelledby="lp-title">
   <div class="main-container">
     <h2
+      id="services-main-heading"
       class="text-accent text-center text-sm font-black mb-8 tracking-widest uppercase"
     >
       Servicios
@@ -100,10 +101,11 @@ const cardsData = [
 
       <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12"
+        role="list"
       >
         {
           sharedFeatures.map((feature) => (
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4" role="listitem">
               <Icon
                 name={feature.icon}
                 class="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0 transform-[translateZ(0)] backface-hidden will-change-transform"

@@ -67,10 +67,11 @@ const {
   {
     !isRecommended && (
       <a
-        class="bg-transparent border border-white/20 text-light-primary hover:bg-white/5 transition-all duration-300 font-medium py-2 px-4 text-base md:text-lg text-center"
+        class="bg-transparent border border-white/20 text-light-primary hover:bg-white/5 transition-all duration-300 font-medium py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 outline-none"
         href={createContactURL("w", ctaMessage)}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={`${ctaText} (abre WhatsApp en una nueva pestaña)`}
       >
         {ctaText}
       </a>
