@@ -33,7 +33,6 @@ const divider = LPL !== LPS;
   >
     {feature}
   </p>
-
   {
     divider && (
       <p
@@ -41,7 +40,7 @@ const divider = LPL !== LPS;
         class:list={[
           "py-4 px-6 bg-white flex flex-col items-center justify-center border-r border-muted text-center font-bold",
           {
-            "text-primary": LPL,
+            "text-accent": LPL,
             "text-muted": !LPL,
           },
         ]}
@@ -51,13 +50,12 @@ const divider = LPL !== LPS;
       </p>
     )
   }
-
   <p
     role="cell"
     class:list={[
       "py-4 px-6 bg-white flex flex-col items-center justify-center text-center font-bold",
       {
-        "text-primary": LPS,
+        "text-accent": LPS,
         "text-muted": !LPS,
       },
     ]}
@@ -65,13 +63,12 @@ const divider = LPL !== LPS;
     <span aria-hidden="true">{LPS ? "✓" : "✗"}</span>
     <span class="sr-only">{LPS ? "Incluido" : "No incluido"}</span>
   </p>
-
   <p
     role="cell"
     class:list={[
       "py-4 px-6 flex flex-col items-center justify-center text-center font-bold",
       {
-        "text-primary": FW,
+        "text-accent": FW,
         "text-muted": !FW,
       },
     ]}

@@ -1,0 +1,190 @@
+---
+import { Icon } from "astro-icon/components";
+
+import CTA from "@/components/CTA.astro";
+import ComparativeFeature from "@/components/ComparativeFeature.astro";
+
+const servicesFeatures = [
+  {
+    feature: "Estructura multi-página",
+    LPL: false,
+    LPS: false,
+    FW: true,
+  },
+  {
+    feature: "Diseño adaptable y moderno",
+    LPL: true,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Carga y velocidad optimizada",
+    LPL: true,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Posicionamiento en buscadores y asistentes de IA",
+    LPL: true,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Conexión a redes sociales",
+    LPL: true,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Contacto directo por WhatsApp",
+    LPL: true,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Ubicación interactiva en Google Maps",
+    LPL: true,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Correo electrónico profesional",
+    LPL: false,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Alojamiento web",
+    LPL: true,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Subdominio gestionado por CORUZ",
+    LPL: true,
+    LPS: false,
+    FW: false,
+  },
+  {
+    feature: "Dominio .com propio",
+    LPL: false,
+    LPS: true,
+    FW: true,
+  },
+  {
+    feature: "Seguridad y certificado SSL",
+    LPL: true,
+    LPS: true,
+    FW: true,
+  },
+];
+---
+
+<section
+  id="comparative"
+  class="py-32 bg-light text-dark-secondary"
+  aria-labelledby="comparative-title"
+>
+  <div class="main-container">
+    <h2
+      class="text-accent text-center text-sm font-black mb-8 tracking-widest uppercase"
+    >
+      COMPARATIVA
+    </h2>
+    <h3
+      id="comparative-title"
+      class="text-dark-primary w-full xl:w-2/3 mx-auto text-center text-3xl sm:text-4xl font-bold leading-tight mb-6"
+    >
+      Elige la solución que mejor se adapta a tu negocio
+    </h3>
+    <p class="text-center text-base sm:text-lg leading-relaxed">
+      Diseño y desarrollo de páginas web profesionales en México.
+    </p>
+    <div class="mt-20" role="table">
+      <div
+        class="grid w-full grid-cols-2 lg:grid-cols-[40%_30%_30%] border-b border-muted"
+        role="row"
+      >
+        <h4
+          class="hidden lg:flex justify-start items-end text-lg sm:text-xl font-bold leading-tight py-5 text-dark-primary"
+          role="columnheader"
+        >
+          Características
+        </h4>
+        <div
+          class="bg-white pt-5 flex flex-col gap-3 justify-start items-center text-center"
+          role="columnheader"
+        >
+          <Icon
+            name="landing-page"
+            class="w-16 h-16 sm:w-20 sm:h-20 text-dark"
+            aria-hidden="true"
+          />
+          <h4
+            class="text-lg sm:text-xl font-bold leading-tight text-dark-primary"
+          >
+            Landing Page
+          </h4>
+          <p class="text-sm sm:text-base leading-relaxed mb-2 px-5">
+            La solución más rápida para tener presencia y captar clientes.
+          </p>
+          <div class="flex w-full border-t border-muted">
+            <h5
+              class="flex-1 py-5 font-bold text-sm sm:text-base leading-tight border-r border-muted text-dark-primary"
+            >
+              Lite
+            </h5>
+            <h5
+              class="flex-1 py-5 font-bold text-sm sm:text-base leading-tight text-dark-primary"
+            >
+              Estándar
+            </h5>
+          </div>
+        </div>
+        <div
+          class="py-5 flex flex-col gap-3 justify-start items-center text-center"
+          role="columnheader"
+        >
+          <Icon
+            name="full-web"
+            class="w-16 h-16 sm:w-20 sm:h-20 text-dark"
+            aria-hidden="true"
+          />
+          <h4
+            class="text-lg sm:text-xl font-bold leading-tight text-dark-primary"
+          >
+            Full Web
+          </h4>
+          <p class="text-sm sm:text-base leading-relaxed px-5">
+            Estructura robusta y escalable para máxima autoridad en tu sector.
+          </p>
+        </div>
+      </div>
+      {
+        servicesFeatures.map((elemento) => (
+          <ComparativeFeature
+            feature={elemento.feature}
+            LPL={elemento.LPL}
+            LPS={elemento.LPS}
+            FW={elemento.FW}
+          />
+        ))
+      }
+      <div class="grid w-full grid-cols-2 lg:grid-cols-[40%_30%_30%]">
+        <div class="hidden lg:block"></div>
+        <div class="bg-white py-16 px-6 flex items-center justify-center">
+          <CTA
+            text="¡Quiero una Landing Page!"
+            message="Buen día, quiero cotizar una landing page, ¿me podrían enviar información?"
+          />
+        </div>
+        <div class="py-16 px-6 flex items-center justify-center">
+          <CTA
+            text="¡Quiero una Full Web!"
+            message="Buen día, quiero cotizar una full web, ¿me podrían enviar información?"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
