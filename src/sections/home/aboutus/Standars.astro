@@ -1,0 +1,61 @@
+---
+import StandarsElement from "@/components/StandarsElement.astro";
+
+const features = [
+  {
+    icon: "streamline-ultimate.responsive-design",
+    title: "Diseño Adaptable y Moderno",
+    description:
+      "Tu sitio se verá increíble en cualquier dispositivo, garantizando una experiencia óptima para tus clientes.",
+  },
+  {
+    icon: "mingcute.ai-line",
+    title: "Optimización Total",
+    description:
+      "Sitios rápidos y ligeros, optimizados para buscadores y los nuevos asistentes de Inteligencia Artificial.",
+  },
+  {
+    icon: "mdi.envelope",
+    title: "Correo Profesional",
+    description:
+      "Proyecta una imagen confiable con cuentas de correo bajo tu propio dominio (ej. info@tunegocio.com).",
+  },
+  {
+    icon: "uil.server",
+    title: "Alojamiento Web",
+    description:
+      "Servidores estables, seguros y de alta velocidad para que tu web esté siempre disponible.",
+  },
+  {
+    icon: "stash.domain",
+    title: "Dominio .com propio",
+    description:
+      "Te ayudamos a elegir el nombre perfecto para tu marca y lo registramos por ti.",
+  },
+  {
+    icon: "material-symbols.security-rounded",
+    title: "Seguridad y Certificado SSL",
+    description:
+      "Incluimos protección avanzada para que la navegación de tus usuarios sea siempre segura y privada.",
+  },
+];
+---
+
+<div class="mt-32" aria-labelledby="standards-title">
+  <h4
+    id="standards-title"
+    class="max-w-md mx-auto sm:max-w-full text-xl sm:text-2xl font-bold leading-tight text-dark-primary mb-20"
+  >
+    Estándares de calidad incluidos en cada proyecto.
+  </h4>
+  <div
+    class="max-w-md mx-auto sm:max-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12"
+    role="list"
+  >
+    {
+      features.map(({ icon, title, description }) => (
+        <StandarsElement icon={icon} title={title} description={description} />
+      ))
+    }
+  </div>
+</div>
