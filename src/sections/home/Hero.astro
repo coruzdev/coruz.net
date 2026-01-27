@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import heroImage from "@/assets/images/hero.jpg";
 ---
 
-<section id="home" class="relative py-40 overflow-hidden">
+<section id="home" class="relative py-40 overflow-hidden" aria-labelledby="hero-title">
   <Image
     src={heroImage}
     format="webp"
@@ -14,6 +14,7 @@ import heroImage from "@/assets/images/hero.jpg";
   <div class="absolute inset-0 bg-dark-primary/80 bg-blend-overlay -z-10"></div>
   <div class="main-container text-light-primary">
     <h1
+      id="hero-title"
       class="sm:mx-10 text-4xl sm:text-5xl lg:text-6xl leading-tight font-black text-center mb-10"
     >
       Impulsa tu negocio con una página web completa y accesible
