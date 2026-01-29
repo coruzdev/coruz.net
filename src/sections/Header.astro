@@ -19,7 +19,11 @@ import CTA from "@/components/CTA.astro";
       rel="noopener noreferrer"
       aria-label={`Enviar mensaje por WhatsApp al número ${CONTACT_INFO.whatsAppNumber} (abre WhatsApp en una nueva pestaña)`}
     >
-      <Icon name="ic.baseline-whatsapp" aria-hidden="true" />
+      <Icon
+        name="garden:whatsapp-fill-12"
+        class="w-3 h-3 md:w-4 md:h-4 transform-[translateZ(0)] backface-hidden will-change-transform"
+        aria-hidden="true"
+      />
       {CONTACT_INFO.whatsAppNumberFormatted}
     </a>
     <a
@@ -29,7 +33,11 @@ import CTA from "@/components/CTA.astro";
       rel="noopener noreferrer"
       aria-label={`Enviar correo electrónico a ${CONTACT_INFO.infoEmail} (abre el cliente de correo)`}
     >
-      <Icon name="mdi.envelope" aria-hidden="true" />
+      <Icon
+        name="mdi:envelope"
+        class="w-4 h-4 md:w-5 md:h-5 transform-[translateZ(0)] backface-hidden will-change-transform"
+        aria-hidden="true"
+      />
       {CONTACT_INFO.infoEmail}
     </a>
   </div>
@@ -82,14 +90,14 @@ import CTA from "@/components/CTA.astro";
     >
       <Icon
         id="mobile-nav-open"
-        name="material-symbols.menu-rounded"
-        class="w-10 max-md:w-8 h-10 max-md:h-8"
+        name="material-symbols:menu-rounded"
+        class="w-8 h-8 md:w-10 md:h-10 transform-[translateZ(0)] backface-hidden will-change-transform"
         aria-hidden="true"
       />
       <Icon
         id="mobile-nav-close"
-        name="material-symbols.close-rounded"
-        class="w-10 max-md:w-8 h-10 max-md:h-8 hidden"
+        name="material-symbols:close-rounded"
+        class="w-8 h-8 md:w-10 md:h-10 hidden transform-[translateZ(0)] backface-hidden will-change-transform"
         aria-hidden="true"
       />
     </button>
@@ -135,22 +143,22 @@ import CTA from "@/components/CTA.astro";
     // Obtiene los elementos necesarios del DOM
     const headerElement = document.querySelector("header") as HTMLElement;
     const mobileNavButton = document.querySelector(
-      "#mobile-nav-button"
+      "#mobile-nav-button",
     ) as HTMLButtonElement;
     const mobileNavOpen = document.querySelector(
-      "#mobile-nav-open"
+      "#mobile-nav-open",
     ) as HTMLElement;
     const mobileNavClose = document.querySelector(
-      "#mobile-nav-close"
+      "#mobile-nav-close",
     ) as HTMLElement;
     const mobileNav = document.querySelector("#mobile-nav") as HTMLDivElement;
     const mobileNavContent = document.querySelector(
-      "#mobile-nav-content"
+      "#mobile-nav-content",
     ) as HTMLElement;
 
     // Obtiene todos los enlaces de anclaje
     const anchorLinks = document.querySelectorAll<HTMLAnchorElement>(
-      'a[href^="/#"], a[href^="#"]'
+      'a[href^="/#"], a[href^="#"]',
     );
 
     // Función para hacer scroll suave a una sección específica y limpiar el hash de la URL sin recargar la página
@@ -169,7 +177,7 @@ import CTA from "@/components/CTA.astro";
       history.replaceState(
         {},
         document.title,
-        `${window.location.pathname}${window.location.search}`
+        `${window.location.pathname}${window.location.search}`,
       );
       return true;
     };

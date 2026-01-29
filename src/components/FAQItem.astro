@@ -1,7 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 
-
 interface Props {
   question: string;
   answer: Array<string>;
@@ -10,17 +9,27 @@ interface Props {
 const { question, answer } = Astro.props;
 ---
 
-<details 
+<details
   name="faq"
   class="group border-b border-muted/30 py-4 cursor-pointer outline-none transition-all duration-300 hover:bg-white/5"
 >
-  <summary class="flex justify-between items-center font-medium text-lg sm:text-xl text-dark-primary group-open:text-accent transition-colors duration-300">
+  <summary
+    class="flex justify-between items-center font-medium text-base sm:text-lg text-dark-primary group-open:text-accent transition-colors duration-300"
+  >
     <span>{question}</span>
-    <span class="ml-6 shrink-0 transition-transform duration-300 group-open:rotate-180">
-      <Icon name="ep.arrow-down-bold" class="w-5 h-5 text-accent" aria-hidden="true" />
+    <span
+      class="ml-6 shrink-0 transition-transform duration-300 group-open:rotate-180"
+    >
+      <Icon
+        name="ep:arrow-down-bold"
+        class="w-5 h-5 text-accent transform-[translateZ(0)] backface-hidden will-change-transform"
+        aria-hidden="true"
+      />
     </span>
   </summary>
-  <div class="mt-4 text-sm sm:text-base leading-relaxed overflow-hidden transition-all duration-300 max-h-0 group-open:max-h-96 flex flex-col gap-4">
+  <div
+    class="mt-4 text-sm sm:text-base leading-relaxed overflow-hidden transition-all duration-300 max-h-0 group-open:max-h-96 flex flex-col gap-4"
+  >
     {answer.map((item: string) => <p>{item}</p>)}
   </div>
 </details>
@@ -29,13 +38,19 @@ const { question, answer } = Astro.props;
   details summary::-webkit-details-marker {
     display: none;
   }
-  
+
   details[open] summary ~ * {
-    animation: sweep .3s ease-in-out;
+    animation: sweep 0.3s ease-in-out;
   }
 
   @keyframes sweep {
-    0%    {opacity: 0; transform: translateY(-10px)}
-    100%  {opacity: 1; transform: translateY(0)}
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
