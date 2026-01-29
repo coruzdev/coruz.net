@@ -11,18 +11,24 @@ const DEFAULT_MESSAGE =
 
 export function createContactURL(
   type: string,
-  message: string = DEFAULT_MESSAGE
+  message: string = DEFAULT_MESSAGE,
 ) {
   if (type === "w")
     return `https://wa.me/${CONTACT_INFO.whatsAppNumber}?text=${encodeURI(
-      message
+      message,
     )}`;
   if (type === "e-info")
     return `mailto:${CONTACT_INFO.infoEmail}?subject=${encodeURI(
-      "Solicitud de información"
+      "Solicitud de información",
     )}&body=${encodeURI(message)}`;
   if (type === "e-arco")
     return `mailto:${CONTACT_INFO.contactEmail}?subject=${encodeURI(
-      "Derechos ARCO"
+      "Derechos ARCO",
     )}`;
+  if (type === "e-problem") {
+    const body = "Mi dominio es: \r\n\r\nTengo el siguiente problema: ";
+    return `mailto:${CONTACT_INFO.supportEmail}?subject=${encodeURIComponent(
+      "Problema con mi página web",
+    )}&body=${encodeURIComponent(body)}`;
+  }
 }

@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon/components";
+
+import { createContactURL } from "@/coruz.net.config";
+---
+
+<section
+  id="support"
+  class="w-full bg-accent py-12"
+  aria-labelledby="support-heading"
+>
+  <div
+    class="main-container flex flex-col lg:flex-row items-center justify-between gap-10"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 group"
+    >
+      <div
+        class="bg-white/20 p-4 rounded-2xl shrink-0 transition-transform duration-300 group-hover:scale-110"
+      >
+        <Icon
+          name="fa6-solid:user-gear"
+          class="w-8 h-8 md:w-10 md:h-10 text-white transform-[translateZ(0)] backface-hidden will-change-transform"
+          aria-hidden="true"
+        />
+      </div>
+      <div>
+        <h2
+          id="support-heading"
+          class="text-white text-lg sm:text-2xl font-black uppercase tracking-wider mb-2"
+        >
+          ¿Ya eres cliente y necesitas ayuda?
+        </h2>
+        <p
+          class="text-light-primary text-sm sm:text-base font-medium max-w-xl leading-relaxed"
+        >
+          Nuestro equipo de soporte está listo para asistirte de inmediato con
+          cualquier detalle técnico o duda sobre tu sitio.
+        </p>
+      </div>
+    </div>
+    <a
+      class="bg-white text-accent hover:bg-white/90 text-sm sm:text-base uppercase font-bold text-center font-display px-12 py-5 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 outline-none shadow-xl shadow-black/10"
+      href={createContactURL("e-problem")}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Reportar un problema (abre el cliente de correo)"
+    >
+      Reportar Problema
+    </a>
+  </div>
+</section>
