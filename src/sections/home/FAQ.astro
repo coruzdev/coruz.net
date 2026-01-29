@@ -1,6 +1,6 @@
 ---
 import FAQItem from "@/components/FAQItem.astro";
-import { createContactURL } from "@/coruz.net.config";
+import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
 
 const faqs = [
   {
@@ -23,7 +23,7 @@ const faqs = [
     answer: [
       "Incluimos soporte técnico especializado para la gestión de tu infraestructura digital, abarcando el alojamiento web (hosting), la administración del dominio, correos y la seguridad del certificado SSL durante los primeros 12 meses.",
       "Este servicio te brinda acompañamiento continuo ante cualquier duda técnica o eventualidad con el servidor, permitiendo que te enfoques totalmente en la operación de tu negocio. El soporte se mantiene vigente de forma automática al renovar estos componentes anualmente con nosotros.",
-      "Si llegaras a presentar algún inconveniente, puedes contactarnos directamente a través del correo soporte@coruz.net. Solo necesitas indicarnos el dominio de tu página y una breve descripción del problema para que nuestro equipo te brinde asistencia técnica inmediata.",
+      `Si llegaras a presentar algún inconveniente, puedes contactarnos directamente a través del correo ${CONTACT_INFO.supportEmail}. Solo necesitas indicarnos el dominio de tu página y una breve descripción del problema para que nuestro equipo te brinde asistencia técnica inmediata.`,
     ],
   },
   {
@@ -37,7 +37,7 @@ const faqs = [
     question: "¿Puedo actualizar mi página en el futuro?",
     answer: [
       "Tu sitio web es totalmente escalable y puede evolucionar en cualquier momento, ya sea migrando de un plan Lite a uno Standard o saltando a una Full Web.",
-      "Si deseas potenciar tu página, solo envíanos un correo a soporte@coruz.net con tu dominio y el servicio al que quieres actualizar. Nosotros realizaremos la cotización correspondiente para realizar el cambio sin complicaciones.",
+      `Si deseas potenciar tu página, solo envíanos un correo a ${CONTACT_INFO.supportEmail} con tu dominio y el servicio al que quieres actualizar. Nosotros realizaremos la cotización correspondiente para realizar el cambio sin complicaciones.`,
     ],
   },
   {
@@ -52,7 +52,7 @@ const faqs = [
 
 <section
   id="faq"
-  class="py-32 bg-light text-dark-secondary"
+  class="py-32 light-section"
   aria-labelledby="faq-heading"
 >
   <div class="main-container">
@@ -79,7 +79,7 @@ const faqs = [
       <div class="mt-16 p-8 bg-white border border-light-primary text-center">
         <p class="text-base mb-4">¿Aún tienes dudas?</p>
         <a
-          class="bg-dark hover:bg-dark/90 text-light-primary hover:text-light-primary/90 transition-all duration-300 font-medium py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 outline-none"
+          class="bg-dark hover:bg-dark/90 text-light-primary hover:text-light-primary/90 transition-all duration-300 font-medium font-display py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 outline-none"
           href={createContactURL(
             "w",
             "Buen día, tengo una duda respecto a los servicios que ofrecen.",

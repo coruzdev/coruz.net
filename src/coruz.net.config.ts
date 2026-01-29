@@ -3,6 +3,7 @@ export const CONTACT_INFO = {
   whatsAppNumberFormatted: "+52 55 7951 1924",
   infoEmail: "info@coruz.net",
   contactEmail: "contacto@coruz.net",
+  supportEmail: "soporte@coruz.net",
 };
 
 const DEFAULT_MESSAGE =

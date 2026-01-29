@@ -32,11 +32,11 @@ body {
 }
 
 .dark-section {
-  @apply bg-dark text-light-primary;
+  @apply bg-dark text-light-secondary;
 }
 
 .light-section {
-  @apply bg-light text-dark-primary;
+  @apply bg-light text-dark-secondary;
 }
 
 .main-container {
