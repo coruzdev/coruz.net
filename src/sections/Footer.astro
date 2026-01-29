@@ -65,7 +65,7 @@ import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
         rel="noopener noreferrer"
         aria-label={`Enviar mensaje por WhatsApp al número ${CONTACT_INFO.whatsAppNumber} (abre WhatsApp en una nueva pestaña)`}
       >
-        <Icon name="ic.baseline-whatsapp" />
+        <Icon name="ic.baseline-whatsapp" aria-hidden="true" />
         {CONTACT_INFO.whatsAppNumberFormatted}
       </a>
       <a
@@ -75,7 +75,7 @@ import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
         rel="noopener noreferrer"
         aria-label={`Enviar correo electrónico a ${CONTACT_INFO.infoEmail} (abre el cliente de correo)`}
       >
-        <Icon name="mdi.envelope" />
+        <Icon name="mdi.envelope" aria-hidden="true" />
         {CONTACT_INFO.infoEmail}
       </a>
     </div>
