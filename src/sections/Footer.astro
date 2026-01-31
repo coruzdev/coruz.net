@@ -1,7 +1,7 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components'
 
-import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
+import { CONTACT_INFO, createContactURL } from '@/coruz.net.config'
 ---
 
 <footer class="bg-dark text-light-primary w-full">
@@ -16,24 +16,18 @@ import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
       />
       <h4 class="text-lg md:text-xl font-bold leading-snug">
         <span class="font-logo block lg:inline mb-2 -mt-2">CORUZ</span>
-        <span class="hidden lg:inline"> -</span> Diseño y Desarrollo de Páginas Web
-        en México
+        <span class="hidden lg:inline"> -</span> Diseño y Desarrollo de Páginas Web en México
       </h4>
       <p class="text-sm md:text-base leading-relaxed">
-        Diseñamos y desarrollamos páginas web modernas, seguras y funcionales
-        para profesionales y negocios en México.
+        Diseñamos y desarrollamos páginas web modernas, seguras y funcionales para profesionales y
+        negocios en México.
       </p>
     </div>
     <div
       class="w-full sm:flex-1 flex flex-col justify-center items-center pt-10 pb-10 sm:pb-0 lg:pt-0 border-b border-light-secondary sm:border-none text-center"
     >
       <nav aria-labelledby="footer-menu-heading">
-        <h5
-          id="footer-menu-heading"
-          class="text-base md:text-lg font-bold mb-5"
-        >
-          Menú
-        </h5>
+        <h5 id="footer-menu-heading" class="text-base md:text-lg font-bold mb-5">Menú</h5>
         <ul class="text-sm md:text-base">
           <li class="hover:text-light-secondary">
             <a
@@ -66,40 +60,38 @@ import { CONTACT_INFO, createContactURL } from "@/coruz.net.config";
         </ul>
       </nav>
     </div>
-    <div
-      class="w-full sm:flex-1 flex flex-col justify-center items-center pt-10 lg:pt-0"
-    >
-      <h5
-        id="footer-contact-heading"
-        class="text-base md:text-lg font-bold mb-5"
-      >
-        Contáctanos
-      </h5>
-      <ul
-        class="flex flex-col items-center"
-        aria-labelledby="footer-contact-heading"
-      >
+    <div class="w-full sm:flex-1 flex flex-col justify-center items-center pt-10 lg:pt-0">
+      <h5 id="footer-contact-heading" class="text-base md:text-lg font-bold mb-5">Contáctanos</h5>
+      <ul class="flex flex-col items-center" aria-labelledby="footer-contact-heading">
         <li>
           <a
             class="flex items-center gap-1 py-1 hover:text-light-secondary text-sm md:text-base focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
-            href={createContactURL("w")}
+            href={createContactURL('w')}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Enviar mensaje por WhatsApp al número ${CONTACT_INFO.whatsAppNumber} (abre WhatsApp en una nueva pestaña)`}
           >
-            <Icon name="garden:whatsapp-fill-12" aria-hidden="true" class="w-3 h-3 md:w-4 md:h-4 transform-[translateZ(0)] backface-hidden will-change-transform" />
+            <Icon
+              name="garden:whatsapp-fill-12"
+              aria-hidden="true"
+              class="w-3 h-3 md:w-4 md:h-4 transform-[translateZ(0)] backface-hidden will-change-transform"
+            />
             {CONTACT_INFO.whatsAppNumberFormatted}
           </a>
         </li>
         <li>
           <a
             class="flex items-center gap-1 py-1 hover:text-light-secondary text-sm md:text-base focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
-            href={createContactURL("e-info")}
+            href={createContactURL('e-info')}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Enviar correo electrónico a ${CONTACT_INFO.infoEmail} (abre el cliente de correo)`}
           >
-            <Icon name="mdi:envelope" aria-hidden="true" class="w-4 h-4 md:w-5 md:h-5 transform-[translateZ(0)] backface-hidden will-change-transform" />
+            <Icon
+              name="mdi:envelope"
+              aria-hidden="true"
+              class="w-4 h-4 md:w-5 md:h-5 transform-[translateZ(0)] backface-hidden will-change-transform"
+            />
             {CONTACT_INFO.infoEmail}
           </a>
         </li>

@@ -1,12 +1,12 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components'
 
 interface Props {
-  question: string;
-  answer: Array<string>;
+  question: string
+  answer: Array<string>
 }
 
-const { question, answer } = Astro.props;
+const { question, answer } = Astro.props
 ---
 
 <details
@@ -17,9 +17,7 @@ const { question, answer } = Astro.props;
     class="flex justify-between items-center font-medium text-base sm:text-lg text-dark-primary group-open:text-accent transition-colors duration-300"
   >
     <span>{question}</span>
-    <span
-      class="ml-6 shrink-0 transition-transform duration-300 group-open:rotate-180"
-    >
+    <span class="ml-6 shrink-0 transition-transform duration-300 group-open:rotate-180">
       <Icon
         name="ep:arrow-down-bold"
         class="w-5 h-5 text-accent transform-[translateZ(0)] backface-hidden will-change-transform"

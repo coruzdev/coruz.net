@@ -1,72 +1,71 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components'
 
-import LandingPageCard from "@/components/LandingPageCard.astro";
+import LandingPageCard from '@/components/LandingPageCard.astro'
 
 const sharedFeatures = [
   {
-    text: "Estructura de una sola página",
-    icon: "streamline:layout-window-2",
+    text: 'Estructura de una sola página',
+    icon: 'streamline:layout-window-2',
   },
   {
-    text: "Diseño adaptable y moderno",
-    icon: "streamline-ultimate:responsive-design",
+    text: 'Diseño adaptable y moderno',
+    icon: 'streamline-ultimate:responsive-design',
   },
   {
-    text: "Contacto directo por WhatsApp",
-    icon: "garden:whatsapp-stroke-12",
+    text: 'Contacto directo por WhatsApp',
+    icon: 'garden:whatsapp-stroke-12',
   },
   {
-    text: "Conexión a redes sociales",
-    icon: "tabler:social",
+    text: 'Conexión a redes sociales',
+    icon: 'tabler:social',
   },
   {
-    text: "Ubicación en Google Maps",
-    icon: "hugeicons:maps-square-01",
+    text: 'Ubicación en Google Maps',
+    icon: 'hugeicons:maps-square-01',
   },
   {
-    text: "Carga y velocidad optimizada",
-    icon: "material-symbols:speed-outline",
+    text: 'Carga y velocidad optimizada',
+    icon: 'material-symbols:speed-outline',
   },
   {
-    text: "Posicionamiento en IA",
-    icon: "hugeicons:ai-search",
+    text: 'Posicionamiento en IA',
+    icon: 'hugeicons:ai-search',
   },
   {
-    text: "Alojamiento web",
-    icon: "uil:server",
+    text: 'Alojamiento web',
+    icon: 'uil:server',
   },
   {
-    text: "Seguridad y certificado SSL",
-    icon: "material-symbols:security-rounded",
+    text: 'Seguridad y certificado SSL',
+    icon: 'material-symbols:security-rounded',
   },
-];
+]
 const cardsData = [
   {
-    badge: "PRESENCIA",
-    version: "Lite",
+    badge: 'PRESENCIA',
+    version: 'Lite',
     description:
-      "Tu negocio en internet hoy mismo. La opción ideal para validar tu idea de mercado con una inversión mínima.",
-    versionFeatures: "Subdominio gestionado por CORUZ",
-    featuresExample: "(tunegocio.coruz.net)",
-    CTAText: "Empezar con Lite",
-    CTAMessage:
-      "Buen día, quiero cotizar una landing page lite, ¿me podrían enviar información?",
+      'Tu negocio en internet hoy mismo. La opción ideal para validar tu idea de mercado con una inversión mínima.',
+    versionFeatures: 'Subdominio gestionado por CORUZ',
+    featuresExample: '(tunegocio.coruz.net)',
+    CTAText: 'Empezar con Lite',
+    CTAMessage: 'Buen día, quiero cotizar una landing page lite, ¿me podrían enviar información?',
     isRecommended: false,
   },
   {
-    badge: "IDENTIDAD",
-    version: "Standard",
+    badge: 'IDENTIDAD',
+    version: 'Standard',
     description:
-      "Posiciona tu marca con autoridad. El estándar profesional para empresas que buscan proyectar confianza, seriedad y control total sobre su presencia digital.",
-    versionFeatures: "Dominio .com propio y correo profesional",
-    featuresExample: "(tunegocio.com)",
-    CTAText: "¡Quiero la Standard!",
+      'Posiciona tu marca con autoridad. El estándar profesional para empresas que buscan proyectar confianza, seriedad y control total sobre su presencia digital.',
+    versionFeatures: 'Dominio .com propio y correo profesional',
+    featuresExample: '(tunegocio.com)',
+    CTAText: '¡Quiero la Standard!',
     CTAMessage:
-      "Buen día, quiero cotizar una landing page standard, ¿me podrían enviar información?",
+      'Buen día, quiero cotizar una landing page standard, ¿me podrían enviar información?',
     isRecommended: true,
   },
-];
+]
 ---
 
 <div id="landing-page" class="dark-section pb-32" aria-labelledby="lp-title">
@@ -77,26 +76,17 @@ const cardsData = [
     >
       Landing Page
     </h3>
-    <p
-      class="text-center text-base sm:text-lg leading-relaxed max-w-5xl mx-auto"
-    >
-      La forma más rápida y efectiva de convertir visitas en clientes. Diseñamos
-      una estructura estratégica de navegación continua que guía al usuario
-      directamente hacia el objetivo: contactarte o comprar.
+    <p class="text-center text-base sm:text-lg leading-relaxed max-w-5xl mx-auto">
+      La forma más rápida y efectiva de convertir visitas en clientes. Diseñamos una estructura
+      estratégica de navegación continua que guía al usuario directamente hacia el objetivo:
+      contactarte o comprar.
     </p>
-    <div
-      class="max-w-5xl mx-auto mt-20 mb-16 bg-white/5 border border-white/10 p-8 md:p-12"
-    >
-      <h4
-        class="text-light-primary text-center text-lg sm:text-xl font-bold leading-tight mb-10"
-      >
+    <div class="max-w-5xl mx-auto mt-20 mb-16 bg-white/5 border border-white/10 p-8 md:p-12">
+      <h4 class="text-light-primary text-center text-lg sm:text-xl font-bold leading-tight mb-10">
         Lo que incluye tu Landing Page:
       </h4>
 
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12"
-        role="list"
-      >
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12" role="list">
         {
           sharedFeatures.map((feature) => (
             <div class="flex items-center gap-4" role="listitem">

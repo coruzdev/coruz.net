@@ -1,33 +1,33 @@
 ---
 interface Props {
-  feature: string;
-  LPL: boolean;
-  LPS: boolean;
-  FW: boolean;
+  feature: string
+  LPL: boolean
+  LPS: boolean
+  FW: boolean
 }
 
-const { feature, LPL, LPS, FW } = Astro.props;
+const { feature, LPL, LPS, FW } = Astro.props
 
-const divider = LPL !== LPS;
+const divider = LPL !== LPS
 ---
 
 <div
   role="row"
   class:list={[
-    "grid w-full border-b border-muted text-sm sm:text-base leading-relaxed",
+    'grid w-full border-b border-muted text-sm sm:text-base leading-relaxed',
     {
-      "grid-cols-2 lg:grid-cols-[40%_30%_30%]": !divider,
-      "grid-cols-[25%_25%_50%] lg:grid-cols-[40%_15%_15%_30%]": divider,
+      'grid-cols-2 lg:grid-cols-[40%_30%_30%]': !divider,
+      'grid-cols-[25%_25%_50%] lg:grid-cols-[40%_15%_15%_30%]': divider,
     },
   ]}
 >
   <p
     role="rowheader"
     class:list={[
-      "border-b-2 border-muted lg:border-none py-4 pr-6 flex items-center",
+      'border-b-2 border-muted lg:border-none py-4 pr-6 flex items-center',
       {
-        "col-span-2 lg:col-span-1": !divider,
-        "col-span-3 lg:col-span-1": divider,
+        'col-span-2 lg:col-span-1': !divider,
+        'col-span-3 lg:col-span-1': divider,
       },
     ]}
   >
@@ -38,42 +38,42 @@ const divider = LPL !== LPS;
       <p
         role="cell"
         class:list={[
-          "py-4 px-6 bg-white flex flex-col items-center justify-center border-r border-muted text-center font-bold",
+          'py-4 px-6 bg-white flex flex-col items-center justify-center border-r border-muted text-center font-bold',
           {
-            "text-accent": LPL,
-            "text-muted": !LPL,
+            'text-accent': LPL,
+            'text-muted': !LPL,
           },
         ]}
       >
-        <span aria-hidden="true">{LPL ? "✓" : "✗"}</span>
-        <span class="sr-only">{LPL ? "Incluido" : "No incluido"}</span>
+        <span aria-hidden="true">{LPL ? '✓' : '✗'}</span>
+        <span class="sr-only">{LPL ? 'Incluido' : 'No incluido'}</span>
       </p>
     )
   }
   <p
     role="cell"
     class:list={[
-      "py-4 px-6 bg-white flex flex-col items-center justify-center text-center font-bold",
+      'py-4 px-6 bg-white flex flex-col items-center justify-center text-center font-bold',
       {
-        "text-accent": LPS,
-        "text-muted": !LPS,
+        'text-accent': LPS,
+        'text-muted': !LPS,
       },
     ]}
   >
-    <span aria-hidden="true">{LPS ? "✓" : "✗"}</span>
-    <span class="sr-only">{LPS ? "Incluido" : "No incluido"}</span>
+    <span aria-hidden="true">{LPS ? '✓' : '✗'}</span>
+    <span class="sr-only">{LPS ? 'Incluido' : 'No incluido'}</span>
   </p>
   <p
     role="cell"
     class:list={[
-      "py-4 px-6 flex flex-col items-center justify-center text-center font-bold",
+      'py-4 px-6 flex flex-col items-center justify-center text-center font-bold',
       {
-        "text-accent": FW,
-        "text-muted": !FW,
+        'text-accent': FW,
+        'text-muted': !FW,
       },
     ]}
   >
-    <span aria-hidden="true">{FW ? "✓" : "✗"}</span>
-    <span class="sr-only">{FW ? "Incluido" : "No incluido"}</span>
+    <span aria-hidden="true">{FW ? '✓' : '✗'}</span>
+    <span class="sr-only">{FW ? 'Incluido' : 'No incluido'}</span>
   </p>
 </div>

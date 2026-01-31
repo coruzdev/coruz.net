@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-white: #ffffff;
@@ -18,9 +18,9 @@
 
   --color-accent: #ff6b00;
 
-  --font-sans: "Nunito Sans", system-ui, sans-serif;
-  --font-display: "Work Sans", system-ui, sans-serif;
-  --font-logo: "Audiowide", system-ui, sans-serif;
+  --font-sans: 'Nunito Sans', system-ui, sans-serif;
+  --font-display: 'Work Sans', system-ui, sans-serif;
+  --font-logo: 'Audiowide', system-ui, sans-serif;
 }
 
 :root {
