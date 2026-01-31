@@ -1,43 +1,88 @@
-# Astro Starter Kit: Minimal
+# CORUZ.NET - Sitio web oficial de CORUZ
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+<p align="center">
+  <img src="./public/readme-coruz.jpg" width="768" alt="Banner CORUZ.NET">
+</p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Repositorio del sitio web oficial de **CORUZ**.
 
-## 🚀 Project Structure
+## 📝 Descripción
 
-Inside of your Astro project, you'll see the following folders and files:
+[**Live Preview**](https://coruz.net)
+
+Este repositorio contiene el código fuente de **coruz.net**, el sitio web principal del proyecto CORUZ. Su objetivo es servir como base técnica y visual para presentar los servicios ofrecidos, así como consolidar una estructura mantenible y escalable para futuras evoluciones del proyecto.
+
+El enfoque del sitio es la claridad, el rendimiento y la accesibilidad, utilizando un stack moderno orientado a la generación de HTML optimizado y una experiencia consistente en distintos dispositivos.
+
+> Este README tiene un propósito técnico y documental. No está pensado como material comercial ni promocional.
+
+## 🎯 Alcance
+
+El repositorio abarca exclusivamente el desarrollo y mantenimiento del sitio web **coruz.net**, incluyendo:
+
+- Estructura y layouts del sitio.
+- Componentes reutilizables de interfaz.
+- Secciones de contenido informativo (servicios, información general, contacto).
+- Estilos globales y sistema visual.
+- Configuración básica de SEO técnico y metadatos.
+
+Este proyecto **no** está concebido como una plantilla genérica ni como un framework reutilizable.
+
+## 🛠️ Tecnologías
+
+Stack principal utilizado en el proyecto:
+
+- **Astro** – Generación de sitios orientada a rendimiento.
+- **TypeScript** – Tipado estático y mayor control del código.
+- **Tailwind CSS** – Sistema de estilos basado en utilidades.
+- **HTML / CSS / JavaScript** – Tecnologías base del frontend.
+- **Astro Icon / Iconify** – Gestión de iconografía.
+
+Herramientas de apoyo:
+
+- **pnpm** – Gestor de dependencias.
+- **ESLint / Prettier** – Consistencia y calidad de código.
+
+## 📂 Estructura del proyecto
 
 ```text
 /
-├── public/
+├── public/          # Archivos estáticos públicos
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/      # Recursos gráficos y estáticos
+│   ├── components/  # Componentes reutilizables
+│   ├── layouts/     # Layouts base del sitio
+│   ├── sections/    # Secciones de contenido
+│   ├── styles/      # Estilos globales
+│   └── icons/       # Iconos del proyecto
+└── package.json     # Configuración y scripts
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 💻 Desarrollo local
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+El proyecto puede ejecutarse en entorno local únicamente con fines informativos o de aprendizaje.
 
-Any static assets, like images, can be placed in the `public/` directory.
+**Requisitos:** Node.js >= 20 y pnpm.
 
-## 🧞 Commands
+```bash
+pnpm install
+pnpm dev
+```
 
-All commands are run from the root of the project, from a terminal:
+Por defecto, el servidor se ejecuta en:
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+```
+http://localhost:4321
+```
 
-## 👀 Want to learn more?
+## ⚖️ Licencia
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Este proyecto **no es software de código abierto**.
+
+El uso, copia, modificación o redistribución del código, diseño y contenidos está regulado por la licencia incluida en este repositorio.
+
+Consulta el archivo [LICENSE.md](./LICENSE.md) para conocer los términos completos.
+
+## 👤 Autor
+
+Proyecto desarrollado y mantenido por **Christian Cruz** bajo la marca **CORUZ**.
