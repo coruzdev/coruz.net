@@ -6,6 +6,10 @@ export const CONTACT_INFO = {
   supportEmail: 'soporte@coruz.net',
 }
 
+export const URLS = {
+  home: 'https://coruz.net',
+}
+
 const DEFAULT_MESSAGE = 'Buen día, requiero información de los servicios que ofrecen en CORUZ.'
 
 export function createContactURL(type: string, message: string = DEFAULT_MESSAGE) {

@@ -1,0 +1,135 @@
+---
+import { CONTACT_INFO, URLS, createContactURL } from '@/coruz.net.config'
+---
+
+<section class="main-container py-32 light-section" aria-labelledby="privacy-heading">
+  <h1
+    id="privacy-heading"
+    class="uppercase text-3xl sm:text-4xl font-black text-dark-primary text-center leading-tight mb-10"
+  >
+    Aviso de Privacidad Integral
+  </h1>
+
+  <p class="mb-10">
+    <strong>Christian Orlando Cruz Bonilla</strong>, en su carácter de responsable y titular del
+    proyecto <strong>CORUZ</strong>, con domicilio de contacto en <strong
+      >Ciudad de México, México</strong
+    > y portal de internet <a href="/">{URLS.home}</a>, es responsable del uso y protección de sus
+    datos personales. Al respecto le informamos lo siguiente:
+  </p>
+
+  <h2>¿Para qué fines utilizaremos sus datos personales?</h2>
+  <p class="mb-5">
+    Los datos personales que recabamos de usted se utilizarán para las siguientes finalidades,
+    necesarias para brindarle un servicio adecuado y de calidad:
+  </p>
+  <ul class="mb-10">
+    <li>
+      Dar respuesta a los mensajes recibidos a través de nuestros canales oficiales de contacto
+      (WhatsApp o correo electrónico).
+    </li>
+    <li>Enviar información sobre los paquetes o servicios de su interés.</li>
+    <li>Enviar cotizaciones personalizadas y propuestas comerciales.</li>
+    <li>Informar sobre nuevos servicios, promociones o actualizaciones.</li>
+    <li>Gestionar la prestación, renovación o seguimiento de los servicios contratados.</li>
+  </ul>
+
+  <h2>¿Qué datos personales utilizaremos para estos fines?</h2>
+  <p class="mb-5">
+    Los datos que tratamos son únicamente aquellos que usted proporciona voluntariamente al ponerse
+    en contacto con nosotros:
+  </p>
+  <ul class="mb-10">
+    <li>Nombre completo.</li>
+    <li>Correo electrónico.</li>
+    <li>Número de teléfono o WhatsApp.</li>
+    <li>Contenido del mensaje o solicitud.</li>
+  </ul>
+
+  <h2>Medios de contacto y proveedores externos</h2>
+  <p class="mb-5">
+    Al comunicarse con nosotros mediante los botones de <strong>WhatsApp</strong> o <strong
+      >correo electrónico</strong
+    >, usted utiliza plataformas externas que cuentan con sus propias políticas de privacidad. CORUZ
+    no controla dichas plataformas y recomienda consultar los siguientes avisos:
+  </p>
+  <ul class="mb-10">
+    <li>
+      <a
+        href="https://www.whatsapp.com/legal/privacy-policy"
+        target="_blank"
+        rel="noopener noreferrer">Política de Privacidad de WhatsApp.</a
+      >
+    </li>
+    <li>Política de privacidad del proveedor de correo electrónico que utilice.</li>
+  </ul>
+
+  <h2>Derechos ARCO (Acceso, Rectificación, Cancelación y Oposición)</h2>
+  <p class="mb-5">
+    Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y
+    las condiciones del uso que les damos (Acceso). También puede solicitar la corrección de su
+    información (Rectificación), solicitar que la eliminemos (Cancelación) u oponerse a su uso
+    (Oposición).
+  </p>
+  <p class="mb-5">
+    Para ejercer cualquiera de estos derechos, debe enviar una solicitud al correo electrónico <a
+      href={createContactURL('e-arco')}
+      target="_blank"
+      rel="noopener noreferrer">{CONTACT_INFO.contactEmail}</a
+    > con la siguiente información:
+  </p>
+  <ul class="mb-5">
+    <li>Nombre completo del titular.</li>
+    <li>Teléfono y correo electrónico utilizados al contactarnos.</li>
+    <li>Asunto: “Derechos ARCO”.</li>
+    <li>Descripción clara del derecho que desea ejercer y los motivos de la solicitud.</li>
+    <li>Copia de una identificación oficial vigente.</li>
+  </ul>
+  <p class="mb-10">
+    El plazo de respuesta será de <strong>15 días hábiles</strong> y se enviará al mismo correo desde
+    el cual se realizó la solicitud.
+  </p>
+
+  <h2>Uso de cookies y tecnologías similares</h2>
+  <p class="mb-10">
+    Actualmente, <a href="/">{URLS.home}</a> no utiliza cookies de análisis, publicidad o rastreo. Solo
+    se emplean cookies técnicas necesarias para el correcto funcionamiento del sitio. En caso de implementar
+    herramientas adicionales, este aviso será actualizado y se solicitará su consentimiento previo.
+  </p>
+
+  <h2>Conservación de los datos personales</h2>
+  <p class="mb-10">
+    Los datos personales se conservarán únicamente durante el tiempo necesario para cumplir con las
+    finalidades señaladas o conforme a lo dispuesto por la legislación aplicable.
+  </p>
+
+  <h2>Modificaciones al presente aviso de privacidad</h2>
+  <p class="mb-10">
+    Este aviso de privacidad puede sufrir modificaciones derivadas de cambios legales,
+    actualizaciones de nuestros servicios o políticas internas. Cualquier cambio será publicado en
+    el sitio web <a href="/">{URLS.home}</a>.
+  </p>
+
+  <p class="mb-10">
+    <strong>Última actualización:</strong> 30 de enero de 2026
+  </p>
+</section>
+
+<style>
+  @reference "../../styles/global.css";
+  h2 {
+    @apply text-dark-primary text-lg sm:text-xl font-bold leading-tight mb-5;
+  }
+  p {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+  ul {
+    @apply list-disc list-inside text-base sm:text-lg leading-relaxed ml-5;
+  }
+  a {
+    @apply text-accent hover:text-accent/90 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 outline-none;
+  }
+  strong {
+    @apply text-dark-primary;
+  }
+</style>
