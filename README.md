@@ -1,7 +1,7 @@
 # CORUZ.NET - Sitio web oficial de CORUZ
 
 <p align="center">
-  <img src="./public/readme-coruz.jpg" width="768" alt="Banner CORUZ.NET">
+  <img src="./public/og-home.jpg" width="768" alt="Inicio CORUZ.NET">
 </p>
 
 Repositorio del sitio web oficial de **CORUZ**.
