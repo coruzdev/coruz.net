@@ -1,24 +1,86 @@
 ---
+import '@/styles/global.css'
+
 import { ClientRouter } from 'astro:transitions'
 
-import '@/styles/global.css'
+import { SEO, type Props as SEOProps } from 'astro-seo'
+
+interface Props {
+  infoSEO: SEOProps
+}
+
+const { infoSEO } = Astro.props
 ---
 
 <html lang="es">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <!-- TODO: config astro-seo (meta info) -->
-    <!-- ! Remove after config astro-seo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+
+    <SEO
+      title={infoSEO.title}
+      titleTemplate="%s | CORUZ"
+      titleDefault="Diseño y Desarrollo de Páginas Web en México | CORUZ"
+      description={infoSEO.description}
+      canonical={infoSEO.canonical}
+      nofollow={infoSEO.nofollow}
+      noindex={infoSEO.noindex}
+      extend={{
+        link: [
+          { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+          { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+          { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap',
+          },
+        ],
+        meta: [{ name: 'theme-color', content: '#0b132b' }],
+      }}
     />
-    <!-- ! ----------------------------- -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Diseño y Desarrollo de Páginas Web en México | CORUZ</title>
+
+    {
+      infoSEO.openGraph && (
+        <SEO
+          openGraph={{
+            basic: {
+              title: infoSEO.title ?? 'Diseño y Desarrollo de Páginas Web en México | CORUZ',
+              type: 'website',
+              image: infoSEO.openGraph?.basic?.image ?? 'https://coruz.net/og-home.jpg',
+              url: infoSEO.canonical,
+            },
+            optional: {
+              description: infoSEO.description,
+              determiner: '',
+              locale: 'es_MX',
+              siteName: 'CORUZ',
+            },
+            image: {
+              type: 'image/jpeg',
+              width: 1200,
+              height: 630,
+              alt: infoSEO.title,
+            },
+          }}
+        />
+      )
+    }
+
+    {
+      infoSEO.twitter && (
+        <SEO
+          twitter={{
+            card: 'summary_large_image',
+            creator: '@coruzdev',
+            title: infoSEO.title ?? 'Diseño y Desarrollo de Páginas Web en México | CORUZ',
+            description: infoSEO.description,
+            image: infoSEO.twitter?.image ?? 'https://coruz.net/og-home.jpg',
+            imageAlt: infoSEO.title,
+          }}
+        />
+      )
+    }
+
     <ClientRouter />
   </head>
   <body>

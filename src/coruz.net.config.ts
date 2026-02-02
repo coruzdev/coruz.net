@@ -7,7 +7,7 @@ export const CONTACT_INFO = {
 }
 
 export const URLS = {
-  home: 'https://coruz.net',
+  home: 'https://coruz.net/',
 }
 
 const DEFAULT_MESSAGE = 'Buen día, requiero información de los servicios que ofrecen en CORUZ.'

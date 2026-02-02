@@ -1,12 +1,25 @@
 ---
+import type { Props as SEOProps } from 'astro-seo'
+
+import { URLS } from '@/coruz.net.config'
+
 import Main from '@/layouts/Main.astro'
 
 import Header from '@/sections/Header.astro'
 import PrivacyContent from '@/sections/privacy/PrivacyContent.astro'
 import Footer from '@/sections/Footer.astro'
+
+const infoSEO = {
+  title: 'Aviso de Privacidad',
+  description:
+    'Consulta la información sobre el uso y protección de tus datos personales en CORUZ.',
+  canonical: URLS.home + 'aviso-de-privacidad',
+  nofollow: false,
+  noindex: true,
+} as SEOProps
 ---
 
-<Main>
+<Main infoSEO={infoSEO}>
   <Header />
   <main>
     <PrivacyContent />

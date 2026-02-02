@@ -1,4 +1,8 @@
 ---
+import type { Props as SEOProps } from 'astro-seo'
+
+import { URLS } from '@/coruz.net.config'
+
 import Main from '@/layouts/Main.astro'
 
 import Header from '@/sections/Header.astro'
@@ -6,9 +10,18 @@ import ErrorContent from '@/sections/error/ErrorContent.astro'
 import Footer from '@/sections/Footer.astro'
 
 Astro.response.status = 404
+
+const infoSEO = {
+  title: '404 - Página no encontrada',
+  description:
+    'La página que buscas no existe o fue movida. Te invitamos a regresar al inicio o explorar nuestros servicios.',
+  canonical: URLS.home + '404',
+  nofollow: false,
+  noindex: true,
+} as SEOProps
 ---
 
-<Main>
+<Main infoSEO={infoSEO}>
   <Header />
   <main>
     <ErrorContent />

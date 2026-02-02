@@ -1,4 +1,8 @@
 ---
+import type { Props as SEOProps } from 'astro-seo'
+
+import { URLS } from '@/coruz.net.config'
+
 import Main from '@/layouts/Main.astro'
 import Header from '@/sections/Header.astro'
 import Hero from '@/sections/home/Hero.astro'
@@ -7,9 +11,26 @@ import Services from '@/sections/home/Services.astro'
 import FAQ from '@/sections/home/FAQ.astro'
 import Support from '@/sections/home/Support.astro'
 import Footer from '@/sections/Footer.astro'
+
+const infoSEO = {
+  title: 'Diseño y Desarrollo de Páginas Web en México',
+  description:
+    'Creamos páginas web modernas y personalizadas para negocios y profesionales en México. Aumenta tu presencia online y atrae más clientes.',
+  canonical: URLS.home,
+  nofollow: false,
+  noindex: false,
+  openGraph: {
+    basic: {
+      image: 'https://coruz.net/og-home.jpg',
+    },
+  },
+  twitter: {
+    image: 'https://coruz.net/og-home.jpg',
+  },
+} as SEOProps
 ---
 
-<Main>
+<Main infoSEO={infoSEO}>
   <Header />
   <main>
     <Hero />

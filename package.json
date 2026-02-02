@@ -11,6 +11,7 @@
     "format": "prettier -w --cache ."
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
     "sharp": "^0.33.5",
@@ -33,6 +34,7 @@
     "@iconify-json/tdesign": "^1.2.12",
     "@iconify-json/uil": "^1.2.3",
     "astro-icon": "^1.1.5",
+    "astro-seo": "^1.1.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.5.0",
