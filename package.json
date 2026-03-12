@@ -11,37 +11,37 @@
     "format": "prettier -w --cache ."
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/sitemap": "^3.7.1",
     "@tailwindcss/vite": "^4.2.1",
-    "astro": "^5.18.0",
+    "astro": "^6.0.3",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.3",
+    "@eslint/js": "^9.39.4",
     "@iconify-json/entypo": "^1.2.1",
     "@iconify-json/ep": "^1.2.4",
     "@iconify-json/fa6-solid": "^1.2.4",
-    "@iconify-json/garden": "^1.2.3",
+    "@iconify-json/garden": "^1.2.4",
     "@iconify-json/hugeicons": "^1.2.23",
-    "@iconify-json/material-symbols": "^1.2.59",
+    "@iconify-json/material-symbols": "^1.2.61",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/mingcute": "^1.2.7",
     "@iconify-json/stash": "^1.2.4",
     "@iconify-json/streamline": "^1.2.5",
     "@iconify-json/streamline-ultimate": "^1.2.2",
-    "@iconify-json/tabler": "^1.2.28",
+    "@iconify-json/tabler": "^1.2.31",
     "@iconify-json/tdesign": "^1.2.12",
     "@iconify-json/uil": "^1.2.3",
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.1.0",
-    "eslint": "^9.39.3",
+    "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.6.0",
     "eslint-plugin-prettier": "^5.5.5",
     "neostandard": "^0.13.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript-eslint": "^8.56.1"
+    "typescript-eslint": "^8.57.0"
   }
 }
