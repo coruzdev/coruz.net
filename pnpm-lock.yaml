@@ -17,6 +17,9 @@ importers:
       astro:
         specifier: ^6.0.5
         version: 6.0.5(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2)
+      astro-icon:
+        specifier: ^1.1.5
+        version: 1.1.5
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -66,9 +69,6 @@ importers:
       '@iconify-json/uil':
         specifier: ^1.2.3
         version: 1.2.3
-      astro-icon:
-        specifier: ^1.1.5
-        version: 1.1.5
       astro-seo:
         specifier: ^1.1.0
         version: 1.1.0(prettier-plugin-astro@0.14.1)(prettier@3.8.1)(typescript@5.9.3)
