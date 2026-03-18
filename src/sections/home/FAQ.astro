@@ -57,28 +57,28 @@ const faqs = [
 ]
 ---
 
-<section id="faq" class="py-32 light-section" aria-labelledby="faq-heading">
+<section id="faq" class="light-section py-32" aria-labelledby="faq-heading">
   <div class="main-container">
     <h2
       id="faq-heading"
-      class="text-accent text-center text-sm font-black mb-8 tracking-widest uppercase"
+      class="text-accent mb-8 text-center text-sm font-black tracking-widest uppercase"
     >
       FAQ
     </h2>
     <h3
-      class="w-full xl:w-2/3 mx-auto text-center text-3xl sm:text-4xl font-bold leading-tight mb-6 text-dark-primary"
+      class="text-dark-primary mx-auto mb-6 w-full text-center text-3xl leading-tight font-bold sm:text-4xl xl:w-2/3"
     >
       Preguntas frecuentes
     </h3>
-    <div class="w-12 h-1 bg-accent mx-auto"></div>
-    <div class="max-w-3xl mx-auto">
+    <div class="bg-accent mx-auto h-1 w-12"></div>
+    <div class="mx-auto max-w-3xl">
       <div class="mt-8 space-y-2">
         {faqs.map((faq) => <FAQItem question={faq.question} answer={faq.answer} />)}
       </div>
-      <div class="mt-16 p-8 bg-white border border-light-primary text-center">
-        <p class="text-base mb-4">¿Aún tienes dudas?</p>
+      <div class="border-light-primary mt-16 border bg-white p-8 text-center">
+        <p class="mb-4 text-base">¿Aún tienes dudas?</p>
         <a
-          class="bg-dark hover:bg-dark/90 text-light-primary hover:text-light-primary/90 transition-all duration-300 font-medium font-display py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-dark focus-visible:ring-offset-2 outline-none"
+          class="bg-dark hover:bg-dark/90 text-light-primary hover:text-light-primary/90 font-display focus-visible:ring-dark px-4 py-2 text-center text-base font-medium transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 md:text-lg"
           href={createContactURL(
             'w',
             'Buen día, tengo una duda respecto a los servicios que ofrecen.'

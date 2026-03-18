@@ -2,10 +2,10 @@
 import { CONTACT_INFO, URLS, createContactURL } from '@/coruz.net.config'
 ---
 
-<section class="main-container py-32 light-section" aria-labelledby="privacy-heading">
+<section class="main-container light-section py-32" aria-labelledby="privacy-heading">
   <h1
     id="privacy-heading"
-    class="uppercase text-3xl sm:text-4xl font-black text-dark-primary text-center leading-tight mb-10"
+    class="text-dark-primary mb-10 text-center text-3xl leading-tight font-black uppercase sm:text-4xl"
   >
     Aviso de Privacidad Integral
   </h1>
@@ -118,16 +118,16 @@ import { CONTACT_INFO, URLS, createContactURL } from '@/coruz.net.config'
 <style>
   @reference "../../styles/global.css";
   h2 {
-    @apply text-dark-primary text-lg sm:text-xl font-bold leading-tight mb-5;
+    @apply text-dark-primary mb-5 text-lg leading-tight font-bold sm:text-xl;
   }
   p {
-    @apply text-base sm:text-lg leading-relaxed;
+    @apply text-base leading-relaxed sm:text-lg;
   }
   ul {
-    @apply list-disc list-inside text-base sm:text-lg leading-relaxed ml-5;
+    @apply ml-5 list-inside list-disc text-base leading-relaxed sm:text-lg;
   }
   a {
-    @apply text-accent hover:text-accent/90 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 outline-none;
+    @apply text-accent hover:text-accent/90 focus-visible:ring-accent outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
   strong {
     @apply text-dark-primary;

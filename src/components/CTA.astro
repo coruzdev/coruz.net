@@ -12,7 +12,7 @@ const { text, message, class: className } = Astro.props
 
 <a
   class:list={[
-    'bg-accent hover:bg-accent/90 text-white hover:text-white/90 transition-all duration-300 font-display font-medium py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 outline-none',
+    'bg-accent hover:bg-accent/90 font-display focus-visible:ring-accent px-4 py-2 text-center text-base font-medium text-white transition-all duration-300 outline-none hover:text-white/90 focus-visible:ring-2 focus-visible:ring-offset-2 md:text-lg',
     className,
   ]}
   href={createContactURL('w', message)}

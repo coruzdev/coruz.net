@@ -72,37 +72,37 @@ const cardsData = [
   <div class="main-container">
     <h3
       id="lp-title"
-      class="w-full xl:w-2/3 mx-auto text-center text-3xl sm:text-4xl font-bold text-light-primary leading-tight mb-6"
+      class="text-light-primary mx-auto mb-6 w-full text-center text-3xl leading-tight font-bold sm:text-4xl xl:w-2/3"
     >
       Landing Page
     </h3>
-    <p class="text-center text-base sm:text-lg leading-relaxed max-w-5xl mx-auto">
+    <p class="mx-auto max-w-5xl text-center text-base leading-relaxed sm:text-lg">
       La forma más rápida y efectiva de convertir visitas en clientes. Diseñamos una estructura
       estratégica de navegación continua que guía al usuario directamente hacia el objetivo:
       contactarte o comprar.
     </p>
-    <div class="max-w-5xl mx-auto mt-20 mb-16 bg-white/5 border border-white/10 p-8 md:p-12">
-      <h4 class="text-light-primary text-center text-lg sm:text-xl font-bold leading-tight mb-10">
+    <div class="mx-auto mt-20 mb-16 max-w-5xl border border-white/10 bg-white/5 p-8 md:p-12">
+      <h4 class="text-light-primary mb-10 text-center text-lg leading-tight font-bold sm:text-xl">
         Lo que incluye tu Landing Page:
       </h4>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12" role="list">
+      <div class="grid grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3" role="list">
         {
           sharedFeatures.map((feature) => (
             <div class="flex items-center gap-4" role="listitem">
               <Icon
                 name={feature.icon}
-                class="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0 transform-[translateZ(0)] backface-hidden will-change-transform"
+                class="text-accent h-5 w-5 shrink-0 transform-[translateZ(0)] will-change-transform backface-hidden sm:h-6 sm:w-6"
                 aria-hidden="true"
               />
-              <p class="text-sm sm:text-base leading-tight">{feature.text}</p>
+              <p class="text-sm leading-tight sm:text-base">{feature.text}</p>
             </div>
           ))
         }
       </div>
     </div>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-stretch"
+      class="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:gap-12"
       role="list"
     >
       {

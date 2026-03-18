@@ -4,34 +4,34 @@ import { Image } from 'astro:assets'
 import heroImage from '@/assets/images/hero.jpg'
 ---
 
-<section id="home" class="relative py-40 overflow-hidden" aria-labelledby="hero-title">
+<section id="home" class="relative overflow-hidden py-40" aria-labelledby="hero-title">
   <Image
     src={heroImage}
     format="webp"
     alt="Personas trabajando frente a computadoras en una oficina moderna."
-    class="absolute inset-0 w-full h-full object-cover -z-20"
+    class="absolute inset-0 -z-20 h-full w-full object-cover"
   />
-  <div class="absolute inset-0 bg-dark-primary/80 bg-blend-overlay -z-10"></div>
+  <div class="bg-dark-primary/80 absolute inset-0 -z-10 bg-blend-overlay"></div>
   <div class="main-container text-light-primary">
     <h1
       id="hero-title"
-      class="sm:mx-10 text-4xl sm:text-5xl lg:text-6xl leading-tight font-black text-center mb-10"
+      class="mb-10 text-center text-4xl leading-tight font-black sm:mx-10 sm:text-5xl lg:text-6xl"
     >
       Impulsa tu negocio con una página web completa y accesible
     </h1>
     <p
-      class="mx-10 sm:mx-20 text-base sm:text-lg lg:text-xl text-center leading-relaxed mb-10 sm:mb-20"
+      class="mx-10 mb-10 text-center text-base leading-relaxed sm:mx-20 sm:mb-20 sm:text-lg lg:text-xl"
     >
       Diseñamos páginas web modernas, rápidas y seguras para profesionales y negocios en México,
       listas para impulsar tu presencia digital desde el primer día.
     </p>
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+    <div class="flex flex-col items-center justify-center gap-6 sm:flex-row">
       <CTA
         text="Cotiza tu página hoy"
         message="Buen día, quiero cotizar una página web, ¿me podrían enviar información?"
       />
       <a
-        class="border border-light-primary hover:bg-dark-secondary transition-all duration-300 font-medium font-display py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 outline-none"
+        class="border-light-primary hover:bg-dark-secondary font-display focus-visible:ring-light-primary border px-4 py-2 text-center text-base font-medium transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 md:text-lg"
         href="#services">Ver servicios</a
       >
     </div>

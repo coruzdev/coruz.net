@@ -3,12 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --host",
     "astro": "astro",
+    "format": "prettier -w --cache .",
     "lint": "eslint .",
-    "format": "prettier -w --cache ."
+    "check": "pnpm run format && pnpm run lint && pnpm run build"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
@@ -35,10 +36,12 @@
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.1.0",
     "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.6.0",
     "neostandard": "^0.13.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript-eslint": "^8.57.1"
   }
 }

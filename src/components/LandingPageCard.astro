@@ -31,31 +31,31 @@ const {
   class:list={[
     'relative flex flex-col p-8',
     {
-      'bg-white/5 border border-white/10': !isRecommended,
-      'bg-white/5 border-2 border-accent': isRecommended,
+      'border border-white/10 bg-white/5': !isRecommended,
+      'border-accent border-2 bg-white/5': isRecommended,
     },
   ]}
 >
   {
     isRecommended && (
-      <div class="absolute -top-3.5 -right-0.5 bg-accent text-white text-[10px] font-black px-4 py-1.5 uppercase tracking-widest">
+      <div class="bg-accent absolute -top-3.5 -right-0.5 px-4 py-1.5 text-[10px] font-black tracking-widest text-white uppercase">
         Recomendado
       </div>
     )
   }
-  <div class="flex flex-col items-center text-center mb-6 grow gap-4">
-    <span class="text-[10px] font-black px-4 py-1.5 uppercase tracking-widest bg-white/5">
+  <div class="mb-6 flex grow flex-col items-center gap-4 text-center">
+    <span class="bg-white/5 px-4 py-1.5 text-[10px] font-black tracking-widest uppercase">
       {badge}
     </span>
-    <h5 class="text-3xl font-bold text-light-primary">{version}</h5>
-    <p class="text-base leading-relaxed max-w-11/12">
+    <h5 class="text-light-primary text-3xl font-bold">{version}</h5>
+    <p class="max-w-11/12 text-base leading-relaxed">
       {description}
     </p>
   </div>
-  <div class="flex flex-col justify-center mb-8">
-    <div class="bg-white/5 border border-white/10 p-6 flex flex-col items-center text-center gap-3">
+  <div class="mb-8 flex flex-col justify-center">
+    <div class="flex flex-col items-center gap-3 border border-white/10 bg-white/5 p-6 text-center">
       <p class="text-sm">
-        <span class="block leading-tight font-bold mb-2">{versionFeatures}</span>
+        <span class="mb-2 block leading-tight font-bold">{versionFeatures}</span>
         <span class="block font-medium">{featuresExample}</span>
       </p>
     </div>
@@ -64,7 +64,7 @@ const {
   {
     !isRecommended && (
       <a
-        class="bg-transparent border border-white/20 text-light-primary hover:bg-white/5 transition-all duration-300 font-medium font-display py-2 px-4 text-base md:text-lg text-center focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 outline-none"
+        class="text-light-primary font-display border border-white/20 bg-transparent px-4 py-2 text-center text-base font-medium transition-all duration-300 outline-none hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 md:text-lg"
         href={createContactURL('w', ctaMessage)}
         target="_blank"
         rel="noopener noreferrer"
